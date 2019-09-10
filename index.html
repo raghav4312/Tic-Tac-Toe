@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tic-Tac-Toe</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+        <style>
+            .btn{
+                width: 80px;
+                height: 80px;
+                margin: 1px;
+                background-color: black;
+            }
+            td
+            {
+                color: aliceblue;
+                text-align: center;
+            }
+            .right-div{
+                flex: 1;
+                margin: 0 10px;
+                padding: 2px;
+            }
+            .container
+            {
+                max-width: 700px;
+                margin: 5px auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                border: 1px solid black;
+                padding: 30px;
+
+            }
+
+            label
+            {
+                font-size: 25px;
+                margin: 2px auto;
+            }
+            input
+            {
+                width: 100%;
+                height: 5vh;    
+                margin: 3px auto;
+            }
+            h1{
+                text-align: center;
+                margin-bottom: 50px;
+                font-size: 50px;
+            }
+            h2{
+                text-align: center;
+                font-size: 25px;
+                font-weight: 100;
+            }
+
+            #turn-display{
+                text-align: center;
+                font-size: 40px;
+            }
+	.btnDiv{
+	display:flex;
+	justify-content:space-evenly;
+	}
+	#btnPlayAgain,#btnNewGame
+	{
+	width:40%;
+	padding:10px;
+	}
+        </style>
+    </head>
+
+    <body>
+        <h1>Welcome to Tic-Tac-Toe</h1>
+        <div class="container">
+            <div class="right-div rules">
+                <h2>RULES</h2>
+                <ul>
+                    <li>Player 1 is <span>X</span>, Player 2 is <span>O</span>.  Players take turns putting their marks in empty squares.</li>
+                    <li>The first player to get 3 of his marks in a row (up, down, across, or diagonally) is the winner.</li>
+                    <li>When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="right-div grid">
+                <table class="box">
+                    <tr class="row">
+                        <td class="row1 btn" id="cell1">T</td>
+                        <td class="row1 btn" id="cell2">I</td>
+                        <td class="row1 btn" id="cell3">C</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="row2 btn" id="cell4">T</td>
+                        <td class="row2 btn" id="cell5">A</td>
+                        <td class="row2 btn" id="cell6">C</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="row2 btn" id="cell7">T</td>
+                        <td class="row2 btn" id="cell8">O</td>
+                        <td class="row2 btn" id="cell9">E</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="right-div player-name">
+                <form id="players" action="#">
+                    <label for="player1">Player 1</label>
+                    <br>
+                    <input type="text" name="player1" id="p1">
+                    <br>
+                    <label for="player2">Player 2</label>
+                    <br>
+                    <input type="text" name="player2" id="p2">
+                    <input type="submit" name="" id="" value="Start">
+                </form>
+            </div>
+
+            <div class="right-div turn-disp">
+                <p id="turn-display"></p>
+	<div class="btnDiv">
+	<button id="btnPlayAgain">Restart</button>
+	<button id="btnNewGame">New Game</button>
+	</div>
+            </div>
+        </div>
+        
+    </body>
+    <script src="app.js">
+    
+    </script>
+</html>
